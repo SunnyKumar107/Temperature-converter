@@ -1,0 +1,63 @@
+:root{
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --third-color: #f0f8ff;
+    --shaddow-color: #808080;
+}
+.darkmode{
+    --primary-color: rgb(14, 12, 19);
+    --secondary-color: #fff;
+    --third-color: #061522;
+    --shaddow-color: #fff;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.container{
+    color: var(--secondary-color);
+    padding: 30px;
+    text-align: center;
+    height: 200px;
+    width: 500px;
+    background-color: var(--third-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0px var(--shaddow-color);
+}
+.container .heading{
+    font-size: 30px;
+    font-weight: bold;
+}
+#button{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    float: right;
+    border-radius: 50%;
+}
+.temperature{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 10px;
+}
+.temperature input{
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .container{
+        height: 50vh;
+    }
+    .temperature{
+        display: flex;
+        flex-direction: column;
+    }
+}
